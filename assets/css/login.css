@@ -1,0 +1,53 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: url("/assets/images/login_bg.jpg") no-repeat center;
+  background-size: cover;
+}
+/* 登录背景 */
+.loginAndRegBox {
+  width: 400px;
+  height: 310px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+/* 登录框标题 */
+.titleBox {
+  height: 60px;
+  background: url('/assets/images/login_title.png') no-repeat center;
+}
+/* 隐藏注册页面 */
+.reg-box {
+  display: none;
+}
+/* 所以的行左右30px */
+.layui-form {
+  padding: 0 30px;
+}
+/* 去注册文字居右 */
+.links {
+display: flex;
+justify-content: flex-end;
+}
+/* 去注册文字大小 */
+.links a {
+  font-size: 12px;
+}
+.layui-form-item {
+  position: relative;
+}
+/* 改变icon的位置 */
+.layui-icon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+/* 输入框中的文字向32 */
+.layui-form-item .layui-input {
+  padding-left: 32px;
+}
