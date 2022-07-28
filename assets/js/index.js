@@ -12,7 +12,7 @@ function getUserinfo() {
       if (res.status !== 0) {
         return layer.msg('获取用户信息失败')
       }
-
+      console.log('getUserinfo')
       //调用renderAvater函数渲染用户头像
       renderAvater(res.data)
     }
@@ -20,17 +20,18 @@ function getUserinfo() {
 
   // 渲染用户头像
   function renderAvater(user) {
-    var name = user.username || user.nickname
+    var name = user.nickname || user.username
     $('#welcome').html('欢迎&nbsp&nbsp' + name)
     if (user.user_pic !== null) {
-      $('.layui-nav-img').attr('src', layui - nav - img)
+      $('.text-avatar').hide()
+      $('.layui-nav-img').attr('src', user.user_pic)
     } else {
       $('.layui-nav-img').hide()
       $('.text-avatar').html(name[0].toUpperCase()).show()
     }
   }
   // 点击退出
-  $('.layui-nav-item').click(function () {
+  $('#quit').click(function () {
     layer.confirm('确定退出?', { icon: 3, title: '提示' }, function (index) {
       // 1.清除本地token
       localStorage.removeItem('token')
